@@ -13,13 +13,11 @@ window.onload = () => {
 }
 
 const updateAll = () => {
-// function updateAll() {
   moveAll()
   drawAll()
 }
 
 const moveAll = () => {
-// function moveAll() {
   ballX += ballSpeedX
   ballY += ballSpeedY
 
@@ -29,12 +27,19 @@ const moveAll = () => {
   if (ballY > canvas.height) ballSpeedY *= -1
 }
 
-const drawAll = () => {
-// function drawAll() {
-  ctx.fillStyle = '#ff4500'
-  ctx.fillRect(0, 0, canvas.width, canvas.height)
-  ctx.fillStyle = 'white'
+const drawAll = () =>  {
+  colourRect(0, 0, canvas.width, canvas.height, '#ff4500')
+  colourCircle(ballX, ballY, 10, '#fff')
+}
+
+const colourRect = (topLeftX, topLeftY, boxWidth, boxHeight, fillColour) => {
+  ctx.fillStyle = fillColour
+  ctx.fillRect(topLeftX, topLeftY, boxWidth, boxHeight)
+}
+
+const colourCircle = (centreX, centreY, radius, fillColour) => {
+  ctx.fillStyle = fillColour
   ctx.beginPath()
-  ctx.arc(ballX, ballY, 10, 0, Math.PI * 2, true)
+  ctx.arc(centreX, centreY, 10, 0, Math.PI * 2, true)
   ctx.fill()
 }
