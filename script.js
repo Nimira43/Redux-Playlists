@@ -63,7 +63,7 @@ const moveAll = () => {
   if (ballY > paddleTop &&
       ballY < paddleBottom &&
       ballX > paddleLeft &&
-      ballY < paddleRight) {
+      ballX < paddleRight) {
         ballSpeedY *= -1
       }
 }
@@ -72,7 +72,7 @@ const moveAll = () => {
 const drawAll = () =>  {
   colourRect(0, 0, canvas.width, canvas.height, BACKGROUND_COLOUR) // Clear screen
   colourCircle(ballX, ballY, BALL_RADIUS, BALL_COLOUR) // Draw ball
-  colourRect(paddleX, canvas.height - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOUR) // Draw paddle
+  colourRect(paddleX, canvas.height - PADDLE_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOUR) // Draw paddle
 }
 
 // Draws a filled rectangle on the canvas
