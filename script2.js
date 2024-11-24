@@ -5,19 +5,6 @@ let ballY = 75
 let ballSpeedX = 5
 let ballSpeedY = 5
 
-window.onload = () => {
-  canvas = document.getElementById('game-canvas')
-  ctx = canvas.getContext('2d')
-  const fps = 30
-  setInterval(updateAll, 1000 / fps) 
-}
-
-const updateAll = () => {
-// function updateAll() {
-  moveAll()
-  drawAll()
-}
-
 const moveAll = () => {
 // function moveAll() {
   ballX += ballSpeedX
@@ -37,4 +24,17 @@ const drawAll = () => {
   ctx.beginPath()
   ctx.arc(ballX, ballY, 10, 0, Math.PI * 2, true)
   ctx.fill()
+}
+
+const updateAll = () => {
+// function updateAll() {
+  moveAll()
+  drawAll()
+}
+
+window.onload = () => {
+  canvas = document.getElementById('game-canvas')
+  ctx = canvas.getContext('2d')
+  const fps = 30
+  setInterval(updateAll, 1000 / fps) 
 }
