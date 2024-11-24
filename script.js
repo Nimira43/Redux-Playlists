@@ -1,13 +1,21 @@
 let canvas
-let canvasContext
+let ctx
+let ballX = 75
 
-window.onload = function() {
+window.onload = () => {
   canvas = document.getElementById('game-canvas')
-  canvasContext = canvas.getContext('2d')
-  canvasContext.fillStyle = '#ff4500'
-  canvasContext.fillRect(0, 0, canvas.width, canvas.height)
-  canvasContext.fillStyle = 'white'
-  canvasContext.beginPath()
-  canvasContext.arc(100, 100, 10, 0, Math.PI * 2, true)
-  canvasContext.fill()
+  ctx = canvas.getContext('2d')
+  const fps = 30
+  setInterval(updateAll, 1000 / fps)
+  
+}
+
+function updateAll() {
+  ballX += 5
+  ctx.fillStyle = '#ff4500'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  ctx.fillStyle = 'white'
+  ctx.beginPath()
+  ctx.arc(100, 100, 10, 0, Math.PI * 2, true)
+  ctx.fill()
 }
