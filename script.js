@@ -44,6 +44,8 @@ const updateAll = () => {
 const ballReset = () => {
   ballX = canvas.width / 2
   ballY = canvas.height / 2
+  ballSpeedX = BALL_SPEED_X
+  ballSpeedY = BALL_SPEED_Y
 }
 
 // Moves the ball, handles boundary collisions and resets the ball when it moves out of bounds at the bottom. 
@@ -55,7 +57,7 @@ const moveAll = () => {
   if (ballY < 0) ballSpeedY *= -1
   if (ballY > canvas.height) ballReset()
 
-  const paddleTop = canvas.height - PADDLE_OFFSET 
+  const paddleTop = canvas.height - PADDLE_HEIGHT - PADDLE_OFFSET 
   const paddleBottom = paddleTop + PADDLE_HEIGHT 
   const paddleLeft = paddleX 
   const paddleRight = paddleLeft + PADDLE_WIDTH 
@@ -64,18 +66,18 @@ const moveAll = () => {
       ballY < paddleBottom &&
       ballX > paddleLeft &&
       ballX < paddleRight) {
-        ballSpeedY *= -1
-        const paddleCentre = paddleX + PADDLE_WIDTH / 2
-        const paddleCentreBallDist = ballX - paddleCentre
-        ballSpeedX = paddleCentreBallDist * 0.35
-      }
+    ballSpeedY *= -1
+    const paddleCentre = paddleX + PADDLE_WIDTH / 2
+    const paddleCentreBallDist = ballX - paddleCentre
+    ballSpeedX = paddleCentreBallDist * 0.35
+  }
 }
 
 // Draws all game elements on the canvas
 const drawAll = () =>  {
   colourRect(0, 0, canvas.width, canvas.height, BACKGROUND_COLOUR) // Clear screen
   colourCircle(ballX, ballY, BALL_RADIUS, BALL_COLOUR) // Draw ball
-  colourRect(paddleX, canvas.height - PADDLE_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOUR) // Draw paddle
+  colourRect(paddleX, canvas.height - PADDLE_HEIGHT - PADDLE_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT, PADDLE_COLOUR) // Draw paddle
 }
 
 // Draws a filled rectangle on the canvas
