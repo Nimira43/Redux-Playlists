@@ -65,6 +65,9 @@ const moveAll = () => {
       ballX > paddleLeft &&
       ballX < paddleRight) {
         ballSpeedY *= -1
+        const paddleCentre = paddleX + PADDLE_WIDTH / 2
+        const paddleCentreBallDist = ballX - paddleCentre
+        ballSpeedX = paddleCentreBallDist * 0.35
       }
 }
 
