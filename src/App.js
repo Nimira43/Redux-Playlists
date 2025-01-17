@@ -1,4 +1,5 @@
 import './styles.css'
+import SongPlaylist from './components/SongPlaylist'
 import MoviePlaylist from './components/MoviePlaylist'
 
 export default function App() {
