@@ -11,7 +11,7 @@ export default function App() {
     <div className='container is-fluid'>
       <button 
         onClick={() => handleResetClick()}
-        className='button is-danger'
+        className='button btn-prime'
       >
         Reset Playlists
       </button>

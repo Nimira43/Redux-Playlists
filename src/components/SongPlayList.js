@@ -14,7 +14,7 @@ function SongPlaylist() {
         {song}
         <button
           onClick={() => handleSongRemove(song)}
-          className='button is-danger'
+          className='button btn-prime'
         >
           X
         </button>
@@ -25,11 +25,11 @@ function SongPlaylist() {
   return (
     <div className="content">
       <div className="table-header">
-        <h3 className='subtitle is-3'>Song PlayList</h3>
+        <h3 className='subtitle is-3 light'>Song PlayList</h3>
         <div className="buttons">
           <button 
             onClick={() => handleSongAdd(createRandomSong())}
-            className="button is-link"
+            className="button btn-prime"
           >
             Add Song
           </button>

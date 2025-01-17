@@ -14,7 +14,7 @@ function MoviePlaylist() {
         {movie}
         <button
           onClick={() => handleMovieRemove(movie)}
-          className='button is-danger'
+          className='button btn-prime'
         >
           X
         </button>
@@ -25,11 +25,11 @@ function MoviePlaylist() {
   return (
     <div className="content">
       <div className="table-header">
-        <h3 className='subtitle is-3'>Movie PlayList</h3>
+        <h3 className='subtitle is-3 light'>Movie PlayList</h3>
         <div className="buttons">
           <button 
             onClick={() => handleMovieAdd(createRandomMovie())}
-            className="button is-link"
+            className="button btn-prime"
           >
             Add Movie
           </button>
