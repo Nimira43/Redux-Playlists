@@ -3,8 +3,6 @@
 * {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -66,3 +64,13 @@ h3 {
   margin: 0 !important;
 }
 
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container > button {
+  margin-top: 10px;
+}
