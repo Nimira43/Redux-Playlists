@@ -8,6 +8,7 @@
 }
 
 body {
+  position: relative;
   overflow: hidden;
 }
 
@@ -16,7 +17,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #160600;
+  background-color: #000;
 }
 
 section:before {
@@ -39,12 +40,12 @@ h2 {
   line-height: 2em;
   z-index: 5;
   transform: skew(-14deg);
-  text-shadow: 1px 1px #000,
-               2px 2px #ff4500,
-               3px 3px #000,
-               4px 4px #ff4500,
-               5px 5px #000,
-               6px 6px #ff4500,
+  text-shadow: 1px 1px 0 #000,
+               2px 2px 0 #ff4500,
+               3px 3px 0 #000,
+               4px 4px 0 #ff4500,
+               5px 5px 0 #000,
+               6px 6px 0 #ff4500,
                15px 15px 10px rgba(0, 0, 0, 0.8);
   animation: floating 5s ease-in-out infinite;
 }
@@ -52,17 +53,17 @@ h2 {
 h2 span {
   font-weight: 700;
   font-size: 3em;
-  text-shadow: 1px 1px #000,
-               2px 2px #ff4500,
-               3px 3px #000,
-               4px 4px #ff4500,
-               5px 5px #000,
-               6px 6px #ff4500,
-               7px 7px #000,
-               8px 8px #ff4500,
-               9px 9px #000,
-               10px 10px #ff4500,
-               30px 30px 30px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 #000,
+               2px 2px 0 #ff4500,
+               3px 3px 0 #000,
+               4px 4px 0 #ff4500,
+               5px 5px 0 #000,
+               6px 6px 0 #ff4500,
+               7px 7px 0 #000,
+               8px 8px 0 #ff4500,
+               9px 9px 0 #000,
+               10px 10px 0 #ff4500,
+               30px 30px 30px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes floating {
@@ -81,7 +82,8 @@ section i {
   box-shadow: 0 0 10px #ffd700,
               0 0 20px #ffd700,
               0 0 40px #ffd700,
-              0 0 80px #ffd700,
+              0 0 80px #ffd700;
+  animation: stars linear infinite;
 }
 
 @keyframes stars {
