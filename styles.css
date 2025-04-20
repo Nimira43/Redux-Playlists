@@ -33,7 +33,7 @@ section:before {
 h2 {
   position: absolute;
   font-size: 8vw;
-  font-weight: 400;
+  font-weight: 500;
   color: #d5ba1c;
   text-align: center;
   line-height: 2em;
@@ -46,6 +46,7 @@ h2 {
                5px 5px #000,
                6px 6px #ff4500,
                15px 15px 10px rgba(0, 0, 0, 0.8);
+  animation: floating 5s ease-in-out infinite;
 }
 
 h2 span {
@@ -61,5 +62,14 @@ h2 span {
                8px 8px #ff4500,
                9px 9px #000,
                10px 10px #ff4500,
-               25px 25px 17px rgba(0, 0, 0, 0.8);
+               30px 30px 30px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: skew(-14deg) translateY(-20px);
+  }
+  50% {
+    transform: skew(-14deg) translateY(20px);
+  }
 }
