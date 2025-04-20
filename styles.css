@@ -52,15 +52,44 @@ html {
   border-radius: 0.3rem;
   object-fit: cover;
   opacity: 0.5;
-  
+}
+
+.blog-card-content {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+}
+
+.blog-tours {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 6rem;
+  left: 0;
 }
 
 .tour-img {
   width: 25rem;
   height: 35rem;
+  background: red;
+  border-radius: 1rem;
 }
 
 .tour-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  opacity: 0.5;
+}
+
+.blog-tours-item {
+  width: 6rem;
+  height: 6rem;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  
 }
