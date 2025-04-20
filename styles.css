@@ -73,3 +73,13 @@ h2 span {
     transform: skew(-14deg) translateY(20px);
   }
 }
+
+section i {
+  position: absolute;
+  background: #ffd700;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffd700,
+              0 0 20px #ffd700,
+              0 0 40px #ffd700,
+              0 0 80px #ffd700,
+}
