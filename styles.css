@@ -83,3 +83,18 @@ section i {
               0 0 40px #ffd700,
               0 0 80px #ffd700,
 }
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
